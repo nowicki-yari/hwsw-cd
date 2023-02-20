@@ -14,7 +14,7 @@ COMPRESSED_ISA =
 
 CFLAGS  = -Wall -Os --std=c99 -ffreestanding -nostdlib
 LDFLAGS = --std=gnu99 -Wl,-Bstatic,-T,firmware.lds,-Map,firmware.map,--strip-debug -lgcc
-ARCHITECTURE = rv32i$(subst C,c,$(COMPRESSED_ISA))
+ARCHITECTURE = rv32im$(subst C,c,$(COMPRESSED_ISA))
 
 BUILDDIR = build
 SOURCEDIR = src
